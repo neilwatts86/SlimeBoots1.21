@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "slimebootsmod:item/slimeboots"
+  },
+  "properties": {
+    "hand_animation_on_swap": false
+  }
+}
