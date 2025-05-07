@@ -1,5 +1,6 @@
 package net.codeslinger.slimebootsmod;
 
+import net.codeslinger.slimebootsmod.item.SlimeBootsItem;
 import com.mojang.logging.LogUtils;
 import net.codeslinger.slimebootsmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -23,6 +24,7 @@ public class SlimeBootsMod {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public SlimeBootsMod(IEventBus modEventBus, ModContainer modContainer) {
+
         // Register common setup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -34,6 +36,8 @@ public class SlimeBootsMod {
 
         // Register item to a creative tab
         modEventBus.addListener(this::addCreative);
+
+        NeoForge.EVENT_BUS.addListener(SlimeBootsItem::onLivingJump);
 
         // Register ModConfig so FML can load config file
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

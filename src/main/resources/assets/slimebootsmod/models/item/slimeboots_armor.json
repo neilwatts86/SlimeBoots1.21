@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "slimebootsmod:item/slimeboots",
+    "layer1": "slimebootsmod:item/slimeboots_overlay"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "slimebootsmod:item/slimeboots_armor"
+    }
+  ]
+}
